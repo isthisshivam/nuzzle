@@ -1,0 +1,86 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.nuzzle.dev.com">
+
+          <uses-permission android:name="android.permission.INTERNET" />
+          <uses-permission android:name="android.permission.RECORD_AUDIO" />
+             <!-- Request the READ_EXTERNAL_STORAGE permission -->
+         <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+          <!-- Request the camera permission -->
+          <uses-permission android:name="android.permission.CAMERA"/>
+          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+           <uses-feature android:name="android.hardware.camera" android:required="true" />
+         <uses-feature android:name="android.hardware.camera.front" android:required="true" />
+          <!-- Request the location permission -->
+          <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+        
+         <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <application
+      android:name=".MainApplication"
+      android:label="@string/app_name"
+      android:icon="@mipmap/ic_launcher"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:allowBackup="false"
+      android:usesCleartextTraffic="true"
+      android:requestLegacyExternalStorage="true"
+       android:screenOrientation="portrait"
+      android:theme="@style/AppTheme">
+
+
+    <!-- Change the value to true to enable pop-up for in foreground on receiving remote notifications (for prevent duplicating while showing local notifications set this to false) -->
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_foreground"
+                    android:value="true"/>
+        <!-- Change the resource name to your App's accent color - or any other color you want -->
+        <meta-data  android:name="com.dieam.reactnativepushnotification.notification_color"
+                    android:resource="@color/white"/> <!-- or @android:color/{name} to use a standard color -->
+
+        <meta-data
+        android:name="com.dieam.reactnativepushnotification.default_notification_channel_id"
+        android:value="NUZZLE_PUSH_ID" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationActions" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher" />
+        <receiver android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+      <activity
+        android:name=".MainActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait" 
+        android:windowSoftInputMode="adjustResize"
+          android:exported="true">
+
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+      </activity>
+      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+      <meta-data
+     android:name="com.google.android.geo.API_KEY"
+     android:value="AIzaSyDf93T2HBhrg4VOz3b_rQi2TVaX2AFt1H8"/>
+     <!-- android:value="AIzaSyAjOl77m-EDOsfX1qCFKKDCUPaVpnkdhek"/> -->
+        
+         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "836340014752",
+    "firebase_url": "https://nuzzle-303418-default-rtdb.firebaseio.com",
+    "project_id": "nuzzle-303418",
+    "storage_bucket": "nuzzle-303418.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836340014752:android:950b63028444653d1a33c5",
+        "android_client_info": {
+          "package_name": "com.nuzzle.dev.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836340014752-8jg5mi0iuuc9uourki2500h5803cunto.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nuzzle.dev.com",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "836340014752-g97fbgvmai2lrhpulv9hlvco1sue382b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nuzzle.dev.com",
+            "certificate_hash": "7fbdf1bbbe8813fe374b0a146139111a8e7501c3"
+          }
+        },
+        {
+          "client_id": "836340014752-ks0pors1pet35ne34hqb92ainod1ou5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDf93T2HBhrg4VOz3b_rQi2TVaX2AFt1H8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "836340014752-gofv3llneqve2h370v7v5stanaqqkhdj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "836340014752-3ps145cbvo0jgccqi7hunjf8khafb37r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Nuzzle"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
